@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Sister!</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body >
+    <div class="container">
+      <div class="balloons">
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+      </div>
+      <div class="card">
+        <h1>🎉 Happy Birthday, Sis! 🎉</h1>
+        <img src="img.jpg" alt="Birthday Cake" />
+        <p>Dear Sister,</p>
+        <p>
+          Wishing you a day filled with love, joy, and all the happiness you
+          bring to everyone around you. You are truly special, and I’m lucky to
+          have you in my life! 💖
+        </p>
+        <p>Have an amazing birthday! 🎂</p>
+        <button onclick="playMusicAndRedirect()">Click for a Surprise! 🎶</button>
+      </div>
+    </div>
+
+    <audio id="birthdaySong" src="song.mp3"></audio>
+
+    <script>
+      function playMusicAndRedirect() {
+        // Store a flag in localStorage
+        localStorage.setItem("playAudio", "true");
+    
+        // Redirect to the next page
+        window.location.href = "surprise.html";
+      }
+    </script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surprise for You! 🎁</title>
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🎊 Teju! 🎊</h1>
+        <p class="paragraph">Hope this made your day special! 💖</p>
+
+        <div class="image-gallery">
+            <!-- First row: Big Image on Left, Two on Right -->
+            <div class="image-container big-image"><img src="tej1.jpg" alt="Happy Moments" /></div>
+            <div class="image-container"><img src="tej2.jpg" alt="Birthday Celebration" /></div>
+            <div class="image-container"><img src="tej3.jpg" alt="Fun Memories" /></div>
+
+            <!-- Second row: Three images below -->
+            <div class="image-container"><img src="tej8.jpg" alt="Sibling Love" /></div>
+            <div class="image-container"><img src="tej5.jpg" alt="Smiling Together" /></div>
+            <div class="image-container big-image2"><img src="tej6.jpg" alt="Sweet Memories" top="0"></div>
+        </div>
+
+        <p class="paragraph">Enjoy your day, you’re amazing! 🎂🥳</p>
+        <div class="button-container">
+            <a href="index.html" class="back-button">Go Back</a>
+        </div>
+    </div>
+
+    <!-- Audio element -->
+    <audio id="birthdaySong" src="song.mp3"></audio>
+
+    <script>
+        // Check if 'playAudio' flag exists in localStorage
+        if (localStorage.getItem("playAudio") === "true") {
+            let audio = document.getElementById("birthdaySong");
+
+            // Try to play the audio
+            audio.play().catch(error => {
+                console.log("Autoplay prevented by browser:", error);
+            });
+
+            // Remove flag so audio doesn't play again on refresh
+            localStorage.removeItem("playAudio");
+        }
+    </script>
+</body>
+</html>
